@@ -1,10 +1,10 @@
+labama
 Alaska
 Arizona
 Arkansas
 California
 Colorado
 Connecticut
-Alabama
 Delaware
 Florida
 Georgia
@@ -48,3 +48,8 @@ Washington
 West Virginia
 Wisconsin
 Wyoming
+labama
+Alaska
+Arizona
+Arkansas
+California
