@@ -1,1 +1,2 @@
-echo $# * $1
+output=$(($# * $1))
+echo $output
