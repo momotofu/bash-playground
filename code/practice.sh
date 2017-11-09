@@ -8,4 +8,8 @@ else
   echo "Your number is odd."
 fi
 
-
+if [[ $3 =~ '^[0-9]+' && $r =~ '^[0-9]+' ]]; then
+  echo [[ $3 + $4 ]]
+else
+  echo $3 $4
+fi
