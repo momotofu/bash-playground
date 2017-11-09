@@ -13,3 +13,8 @@ if [[ $3 =~ '^[0-9]+' && $r =~ '^[0-9]+' ]]; then
 else
   echo $3 $4
 fi
+
+if [[ date "+%a" =~ "Thu" ]]; then
+  echo "Yay it's Thursday!"
+fi
+
