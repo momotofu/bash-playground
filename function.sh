@@ -1,5 +1,11 @@
 function hello {
-  echo "Hello"
+  echo "hello"
 }
 
-hello
+function ntmy {
+  echo "Nice to meet you $1"
+}
+
+function listArgs {
+  echo "Args: $@"
+}
