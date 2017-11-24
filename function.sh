@@ -52,3 +52,11 @@ function echoEvens {
     fi
   done
 }
+
+function odd_percentage {
+  local array=($@)
+  local evens=$(echoEvens ${array[*]})
+  local evensLen=${#evens[*]}
+  local arrayLen=${#array[*]}
+  echo "100 - $evensLen / $arrayLen * 100" | bc -l
+}
