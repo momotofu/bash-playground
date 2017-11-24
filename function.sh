@@ -35,3 +35,11 @@ function plier {
 
   echo $sum_1
 }
+
+function isEven {
+  if [[ $(( $1 % 5 )) -eq 0 ]]; then
+    echo 1
+  else
+    echo 0
+  fi
+}
