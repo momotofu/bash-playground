@@ -11,7 +11,7 @@ function listArgs {
 }
 
 function addseq {
-  sum=0
+  local sum=0
 
   for element in $@
   do
