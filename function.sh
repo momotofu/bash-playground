@@ -61,13 +61,26 @@ function odd_percentage {
   echo "100 - $evensLen / $arrayLen * 100" | bc -l
 }
 
-function fib { 
-    if [ $1 -le 0 ]; then
-        echo 0
-    elif [ $1 -eq 1 ]; then
-        echo 1
-    else
-        echo $[`fib $[$1-2]` + `fib $[$1 - 1]`]
-    fi
-
+function fib {
+	# set up properties
+	local c=0
+	local a=1
+	local b=1
+	
+	# get limit from user
+	read -p "Enter limit of fibonacci series:" n
+	
+	# echo start of the series
+	echo -n "$a "
+	echo -n "$b "
+	
+	#logic
+	while((c<n))
+	do
+		c=$((a+b))
+		echo -n "$c "
+		a=$b
+		b=$c
+	done
+	echo -e "\n"
 }
