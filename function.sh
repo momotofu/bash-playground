@@ -37,9 +37,18 @@ function plier {
 }
 
 function isEven {
-  if [[ $(( $1 % 5 )) -eq 0 ]]; then
+  if [[ $(( $1 % 2 )) -eq 0 ]]; then
     echo 1
   else
     echo 0
   fi
+}
+
+function echoEvens {
+  for number in $@
+  do
+    if [[ $(isEven $number) -eq 1 ]]; then
+      echo $number
+    fi
+  done
 }
