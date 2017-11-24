@@ -60,3 +60,14 @@ function odd_percentage {
   local arrayLen=${#array[*]}
   echo "100 - $evensLen / $arrayLen * 100" | bc -l
 }
+
+function fib { 
+    if [ $1 -le 0 ]; then
+        echo 0
+    elif [ $1 -eq 1 ]; then
+        echo 1
+    else
+        echo $[`fib $[$1-2]` + `fib $[$1 - 1]`]
+    fi
+
+}
