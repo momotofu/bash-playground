@@ -20,3 +20,18 @@ function addseq {
 
   echo $sum
 }
+
+function plier {
+  local sum_1=0
+
+  for int in $@
+  do
+    if [[ $sum_1 -eq 0 ]]; then
+      let sum_1=$int
+    else
+      let sum_1=$(($sum_1*$int))
+    fi
+  done
+
+  echo $sum_1
+}
