@@ -84,3 +84,8 @@ function fib {
 	done
 	echo -e "\n"
 }
+
+function printName {
+  read -p "What is your name?" name
+  echo "Nice to meet you $name"
+}
