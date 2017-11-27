@@ -19,5 +19,8 @@ function fib_p {
     echo -n "$c "
   done
 
+  # print a new line using the execute flag
+  echo -e '\n'
+
   return 0
 }
