@@ -68,9 +68,10 @@ function fib {
 	local b=1
 	
 	# get limit from user
-	read -p "Enter limit of fibonacci series:" n
+	read -p "Enter limit of fibonacci series: " n
 	
 	# echo start of the series
+  echo -n "$c"
 	echo -n "$a "
 	echo -n "$b "
 	
