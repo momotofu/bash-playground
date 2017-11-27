@@ -1,8 +1,8 @@
 function fib_p {
   # declare variables
-  a=1
-  b=1
-  c=0
+  local a=1
+  local b=1
+  local c=0
 
   # print start of the series
   echo -n "$c "
@@ -11,7 +11,7 @@ function fib_p {
 
   # perform fib logic
   while [[ $c -lt $1 ]]; do
-    c=$(($a+$b))
+    c=$((a+b))
     a=$b  # keep track of history
     b=$c
 
