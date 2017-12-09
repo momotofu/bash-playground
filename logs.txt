@@ -1,0 +1,407 @@
+commit d7bb338ecd89acce4f1ebe54578e27a462c3e4d5
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 21:22:54 2017 +0900
+
+    added reqseq.sh
+
+commit 88037411fff6e41f1d35815a1b299ee953281bc3
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 21:07:09 2017 +0900
+
+    made it executable
+
+commit 5b6e734867415c69a0085a03e6280fb209bed57f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 21:05:35 2017 +0900
+
+    finished min_max function
+
+commit 95689387efc16644ac07a1c455c2f8f50f67c3b0
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 20:48:09 2017 +0900
+
+    started min_max func
+
+commit 7a2b363ff7eaaa8ee11889d1b7a8f20594a2ccb8
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 20:44:42 2017 +0900
+
+    fleshed out range function
+
+commit 0a20242d1bae7921223189297a457c75a922370d
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 28 20:23:27 2017 +0900
+
+    started range program
+
+commit 8a98b926ccf3ddfa23c13fd072dbf93fa5c0e962
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 27 19:26:03 2017 +0900
+
+    compared differences and refactored
+
+commit 38e6556cf24e7a7def30e77f8510d069215172c6
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 27 19:25:10 2017 +0900
+
+    added new line
+
+commit 7fdd324c7dab278bd10a356d6f9a9999e45c9da5
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 27 19:24:04 2017 +0900
+
+    created another variation of fib
+
+commit 086d2ac6d334d1abcc364a3947d3a8897caa67df
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 27 18:42:29 2017 +0900
+
+    created a small program
+
+commit 489c8b27958537849ec300be36212e26b931fe73
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Sat Nov 25 19:56:46 2017 +0900
+
+    fixed spacing in greeting
+
+commit 75768f53150ea45de8081d28e921f2c9b3f06e24
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Sat Nov 25 19:56:05 2017 +0900
+
+    added printName function
+
+commit a86873bc4c6f6f9ba6dd79370b4ff9bcbb2f322f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 21:33:27 2017 +0900
+
+    refactored fib function
+
+commit 904afea14a5b23170f2997a59e9dd0534ced2474
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 21:12:53 2017 +0900
+
+    added fib func
+
+commit b39037d72018e17d21de3de01d281c15f18d064d
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 20:36:54 2017 +0900
+
+    added odd_percentage func
+
+commit 98d612eb3d71f69af5404646826f917204c5f673
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 19:59:46 2017 +0900
+
+    added echoEvens function
+
+commit 6a2b698bb057fce024794e366c19c7fb569bb73e
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 19:20:32 2017 +0900
+
+    added isEven func
+
+commit 6b2133c89705968909541ca47d9a44664f24b25f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 19:16:51 2017 +0900
+
+    added the plier function
+
+commit 820e45e2be4331561247cde68b5bc03bbcbc3eaf
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 18:59:41 2017 +0900
+
+    added local keyword
+
+commit 7acfbfc596a047c5f21346840e03f2f9dbc4d6bd
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 18:54:17 2017 +0900
+
+    created addseq function
+
+commit 59d8aa065a253deb4fe2c1dd09c84e51d34be6c5
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 18:52:53 2017 +0900
+
+    added some more functions testing out arguments
+
+commit 9e4a72ed6dc8db9d9df81b82396d707f29c28dde
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Nov 24 18:38:03 2017 +0900
+
+    added funtion.sh
+
+commit fed6bc9df2ce97dceaef7a503072b57e9f54175f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 17:24:42 2017 +0900
+
+    messing around with cut
+
+commit 67c8fcbe4955a4ac9ae51699c795b4fc9fd20e57
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:29:07 2017 +0900
+
+    wrote a nested loop
+
+commit 61d3423f729d825f47990a7e748261ad33d0b15b
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:27:57 2017 +0900
+
+    wrote a while loop
+
+commit 57e1ee0c6144387a77cddc83eb20ae3fe1f8bd7d
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:20:57 2017 +0900
+
+    made some scripts
+
+commit 16979f8f4886a31aedb0f8e9e4c038a33ebbb458
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:15:31 2017 +0900
+
+    wrote for loop
+
+commit 1f3ee24bd22fa2638805749135b3c165d1d76396
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:13:18 2017 +0900
+
+    removed braces folder
+
+commit 914bab75f2f2fe7b56a0a1c8f4d4378c97630305
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:13:01 2017 +0900
+
+    made 100 blank files
+
+commit 973a556f6819b07e3cf1d8bf8bfcf21199f5793b
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:11:20 2017 +0900
+
+    made a bunch of files
+
+commit d91bea3a78466eae2353a505404edfee80742343
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:04:07 2017 +0900
+
+    completed the challenge
+
+commit e225a20b0013f85fd35fa61917b8e25dbe0feb3d
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 16:01:49 2017 +0900
+
+    started array challenge
+
+commit d8128f9b4c58f3920b6d7bee3ca63ab055d7e788
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 15:56:03 2017 +0900
+
+    removed * logic
+
+commit c247371bd599968688433fa76a8172d6b4889691
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 15:55:49 2017 +0900
+
+    messing around with asterisk
+
+commit 73c527404cdc73f77a227e415ec8da7a9b9543cf
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Tue Nov 14 15:47:58 2017 +0900
+
+    started arrays file
+
+commit dd80333e2610425c92e1566564eb2b5d6537a9c6
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 12:05:12 2017 +0900
+
+    got it working forget expression syntax
+
+commit 2d563e0efbb56385c8c0e220bc3597d1b4bb969c
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:55:56 2017 +0900
+
+    fixed some stuffs
+
+commit fcfb48c6251da3ee01ab47edfc860ba184a2f161
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:51:36 2017 +0900
+
+    finished step 4
+
+commit 2de488c4b99a4234e8945015d0856a2fa1e2c110
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:37:14 2017 +0900
+
+    completed step 3
+
+commit 48a6fd0f66026b322992c6811d2557612934bab0
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:33:17 2017 +0900
+
+    completed step 1 and 2
+
+commit 32ac67b89c41b40a6168202cf5deb5d4358c1ab1
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:18:20 2017 +0900
+
+    added complexity
+
+commit d62be49ceb790615d108cdc49e4b776903f71384
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:15:19 2017 +0900
+
+    expanded program
+
+commit b5a5c7fa5d136fbe5b697cc5b7df624e0c4b5850
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:14:08 2017 +0900
+
+    expanded program
+
+commit 36585e3001a02a7a07f293881478e69412de9d9f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:12:39 2017 +0900
+
+    fix syntax error
+
+commit 75ff0ab74e336c566e54e466a0f82bf9b5829869
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:11:56 2017 +0900
+
+    wrote a simple program
+
+commit 27ef056e6625ceeee596b56ba68f8eb399af9d5d
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Thu Nov 9 11:10:53 2017 +0900
+
+    added file
+
+commit c68d7e2ccb6eb90761679feb4e958e0a8608ede0
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 19:22:50 2017 +0900
+
+    made a mad_libs program
+
+commit 9f19626a030b5aac8f053eb60f27900e099b5e4b
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 19:19:24 2017 +0900
+
+    tested out user input
+
+commit 0911d3bc544d75bfca5b287113c0b347d2c04f1f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 19:12:36 2017 +0900
+
+    implemented test_vars.sh
+
+commit c489d907cf5b9d3ad10ab8af0821648b6ec60fe4
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:57:30 2017 +0900
+
+    added test_vars.sh
+
+commit 4bf154324495038024f8be92e6fc4f13e9494d53
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:53:58 2017 +0900
+
+    added vars.sh
+
+commit 532608a7e7b943ec983a79117091420f440cd063
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:22:26 2017 +0900
+
+    tested out some "advanced math"
+
+commit bddd55f90fe4b2bdf0e01b15946b59cd9b77ebd5
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:20:26 2017 +0900
+
+    commented math.sh
+
+commit 8180a34344e13f6860bf84d88006a358732b230e
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:15:53 2017 +0900
+
+    testin"g out big math
+
+commit 77f4dc4246149bae27a4514f5ee599abbc2e9953
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:14:16 2017 +0900
+
+    testin'n out some math
+
+commit 2bdafdf61652ac570da11904bec7706147b30db0
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Mon Nov 6 18:09:10 2017 +0900
+
+    commit
+
+commit 3104590f52611f098c4e1e9fbdd8d05d82860b1e
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Nov 1 20:34:49 2017 +0900
+
+    added clean rule
+
+commit 5a9ffcb2a35e829f16c365d33d0a11bd381dda9f
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Nov 1 20:33:51 2017 +0900
+
+    added all command to makefile
+
+commit ec3520dada56c3222d11d1fc732ee3e1bb3f0cec
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Nov 1 20:29:34 2017 +0900
+
+    generating readme from makefile
+
+commit 290c8d17047155685ff4789612dc1f56babdbc64
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Nov 1 20:25:05 2017 +0900
+
+    added a journal entry
+
+commit 31831a5dbd1bda6e5274b66ec16d94505477f3b5
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Oct 27 01:18:17 2017 +0900
+
+    made a makefile
+
+commit 3bfb71081fc7597fac4e75e19bab789de2974cc1
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Oct 27 01:12:54 2017 +0900
+
+    changes states.txt
+
+commit 0adfc26c3d7cc1ad8f1b744977a72d79b9d13cc0
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Fri Oct 27 00:47:16 2017 +0900
+
+    added four and six
+
+commit d8db58be9eed4eba8fdb51c41bba945503286140
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Oct 25 15:49:48 2017 +0900
+
+    added small.txt
+
+commit 4c98c6027dc1287f9971584cd65deab3bf4a4cb6
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Oct 25 14:36:12 2017 +0900
+
+    added states.text
+
+commit 15f1c3d90054d09c76084b0574fc9f5562b07b3b
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Oct 25 14:35:10 2017 +0900
+
+    removed list.txt
+
+commit 80619d80c2a781084802091d175ade41c41631db
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Oct 25 14:33:57 2017 +0900
+
+    removed unix-work-bench ropo
+
+commit 357ebe04e21a80930a97253118ce549ebd3c6e28
+Author: Christopher Reece <mrkita.reece@gmail.com>
+Date:   Wed Oct 25 14:32:13 2017 +0900
+
+    first commit
