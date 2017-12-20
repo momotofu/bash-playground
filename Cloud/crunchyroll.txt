@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+            <meta property="fb:pages" content="6047074339" />
+
+    <link rel="shortcut icon" href="/favicon.ico?v=1" sizes="16x16"/>
+<link rel="apple-touch-icon" href="http://static.ak.crunchyroll.com/i/beta/ios_icon/cr_ios.png"/>
+    <link rel="alternate" type="application/rss+xml" title="Latest Shows on Crunchyroll" href="http://feeds.feedburner.com/crunchyroll/rss" />
+    <link rel="alternate" type="application/rss+xml" title="Latest Anime News" href="http://feeds.feedburner.com/crunchyroll/animenews" />
+
+          <link rel="canonical" href="http://www.crunchyroll.com" />
+      <link href="https://plus.google.com/106460836780899737568" rel="publisher" />
+      <meta property="og:url" content="http://www.crunchyroll.com" />
+    
+          <meta property="og:site_name" content="Crunchyroll" />
+      <meta property="og:type" content="tv_show" />
+      <meta name="og:description" content="Watch Naruto Shippuden, Bleach, Anime Videos and Episodes Free Online"/>
+    
+    
+    
+          <link rel="stylesheet" type="text/css" href="vendor/jquery.banner_carousel/dist/jquery.banner_carousel.css?v=59059d4b2c1e7e7ebab3b625ee00f4a925ed1a5c"/>
+    
+          <link href="/versioned_assets/css/www/application-legacy.59bc62df.css" rel="stylesheet">
+    
+                  <link rel="stylesheet" type="text/css" href="http://static.ak.crunchyroll.com/versioned_assets/css/view/welcome.b31dccd9.css">
+              <link rel="stylesheet" type="text/css" href="http://static.ak.crunchyroll.com/versioned_assets/css/crcommon/overlay.97151830.css">
+          
+    <title>Crunchyroll - Watch Naruto Shippuden, Bleach, Anime Videos and Episodes Free Online</title>
+
+    <script>
+      if(typeof console==='undefined'){(function(){var noOp=function(){return;};console={log:noOp,info:noOp,warn:noOp,error:noOp,assert:noOp,dir:noOp,clear:noOp,profile:noOp,profileEnd:noOp};})();}
+    </script>
+
+    <script>
+    var DOMAIN = "crunchyroll.com",
+      AJAXROOT = "\x2Fajax\x2F\x3F",
+      WEBROOT = "http\x3A\x2F\x2Fwww.crunchyroll.com\x2F",
+      LOCALE = "enUS",
+      CACHED_TRANSLATIONS = {},
+      page = {};
+  </script>
+
+          <script src="http://static.ak.crunchyroll.com/js/lang/20171212021831/cr/enUS/common.js"></script>
+    
+        <script src="http://static.ak.crunchyroll.com/versioned_assets/js/components/ads_enabled.ac6fa3aa.js"></script>
+    <script src="http://static.ak.crunchyroll.com/versioned_assets/js/modules/www/application.30170e10.js"></script>
+
+    
+    
+    <script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en-US'}
+</script>
+<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5" async defer></script>
+          <script>
+  (function () {
+      //Customer could modify the parameter values from here.
+      var profile_path = "otter_display_live"; // CUSTOMER / SE EDITS HERE
+      window._fw_linktag_params = {
+        scan_delay: 0,
+        allow_rescan_after: 15000, // reset this back to default for now.
+        //allow page slot to be rescanned after a few ms, or disable if -1
+        server: "5fd74.v.fwmrm.net",
+        // CUSTOMER / SE EDITS HERE
+        network_id: "392564",
+        // CUSTOMER / SE EDITS HERE
+        profile: profile_path,
+        // CUSTOMER / SE EDITS HERE
+        other_global_params: "csid=cr_web_homepage",
+        // CUSTOMER / SE EDITS HERE
+        key_values: "" // CUSTOMER / SE EDITS HERE
+      };
+
+      //Customer may not touch below:
+      var e = function () {
+        if (document.addEventListener) document.removeEventListener('DOMContentLoaded', e, false);
+        else window.detachEvent('onload', e);
+        window._fw_page_ready = true;
+      };
+      if (document.addEventListener) document.addEventListener('DOMContentLoaded', e, false);
+      else if (window.attachEvent) window.attachEvent('onload', e);
+
+      var lt = document.createElement('script');
+      lt.type = 'text/javascript';
+      lt.async = true;
+      //FOR PRODUCTION
+      lt.src = window.location.protocol + "//adm.fwmrm.net/p/" + profile_path + "/LinkTag2.js";
+      //FOR DEMO AND TEST ONLY
+      //lt.src = window.location.origin + "/js/LinkTag2.js";
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(lt, s);
+    })();
+</script>
+    
+                      <script src="http://static.ak.crunchyroll.com/versioned_assets/js/view/add_service_worker.154180ed.js"></script>
+          
+    
+    <meta name="y_key" content="82335d8b0386de0f"/>
+<meta name="description" content="Official, legal streaming anime videos including Naruto Shippuden, Attack on Titan, Sword Art Online, Skip Beat, and Shugo Chara. Start watching now."/>
+<meta property="fb:app_id" content="56424855326" />
+    
+  <script src="http://static.ak.crunchyroll.com/versioned_assets/js/tracking/ga_initial_visit.6abd907b.js"></script>
+  <script>
+    (function initializeGA() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    (function initializeGAObject(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-579606-1', 'auto', {
+            'allowLinker': true
+    });
+    ga('require', 'linkid', 'linkid.js');
+
+    (function sendPageview() {
+      var initialVisitDate = ga_initial_visit.getPSTValue();
+      if (initialVisitDate) {
+        ga('set', 'dimension4', initialVisitDate);
+      }
+
+      ga('set', 'dimension5', 'not-registered');
+      ga('set', 'dimension6', '');
+      ga('set', 'dimension7', '');
+      ga('set', 'dimension8', '');
+
+              ga('send', 'pageview');
+          })();
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '210736662603762');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=2107366626037622&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+    <meta name="google-site-verification" content="zuHV4BzoWdv29ExvUbbNKy67VvRS8WWpE1FQThEA-r0" />
+  </head>
+  <body class="main-page responsive enUS ">
+    
+
+
+    
+<header id="header_beta" class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+  <div id="header_container" class="content">
+    <div class="header-navigation">
+      <div class="home">
+        <h1 id="logo_beta" class="header-logo logo-enUS" itemscope itemtype="http://schema.org/Organization">
+          <meta content="Crunchyroll" itemprop="name">
+
+          <a href="/" itemprop="url">
+            <svg viewBox="0 0 96 18">
+              <title>Crunchyroll</title>
+              <use xlink:href="/i/svg/header.svg#cr_logo_noTagline"></use>
+            </svg>
+          </a>
+        </h1>
+
+        <button id="header_mobilemenu_beta" class="mini-menu-button" type="button">
+          <svg class="open-icon" viewBox="0 0 48 48">
+            <title>Open Menu</title>
+            <use xlink:href="/i/svg/header.svg#cr_drawer"></use>
+          </svg>
+
+          <svg class="close-icon" viewBox="0 0 48 48">
+            <title>Close Menu</title>
+            <use xlink:href="/i/svg/header.svg#cr_close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="header_menubar_beta" class="header-menubar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul>
+          <li class="">
+            <a href="/videos/anime" itemprop="url" token="topbar">Shows</a>
+          </li>
+
+                      <li class="">
+              <a href="/comics/manga" itemprop="url" token="topbar">Manga</a>
+            </li>
+          
+          
+          <li class="">
+            <a href="/forum" rel="discussion" itemprop="url" token="topbar">Forums</a>
+          </li>
+
+          
+                      <li class="premium ">
+              <a href="/freetrial?from=topbar" itemprop="url" token="topbar" id="header_try_premium_free">
+                <span class="premium-link-text">
+                  Premium                  <small class="freetrial-note">Try Free</small>
+                </span>
+              </a>
+            </li>
+                  </ul>
+      </nav>
+
+      <nav id="header_userpanel_beta" class="header-userpanel" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul>
+                      <li class="userpanel-item login">
+              <a class="header-icon" href="https://www.crunchyroll.com/login?next=%2F" rel="nofollow" token="login_top">
+                <svg viewBox="0 0 48 48">
+                  <title>Login</title>
+                  <use xlink:href="/i/svg/header.svg#cr_login"></use>
+                </svg>
+                <div class="caption">Login</div>
+              </a>
+            </li>
+          
+          <li class="userpanel-item queue ">
+  <a class="header-icon" href="/home" token="topbar">
+    <div class="icon-container">
+      <svg viewBox="0 0 48 48">
+        <use xlink:href="/i/svg/header.svg#cr_bookmark_header"></use>
+      </svg>
+    </div>
+
+    <div class="caption">Queue</div>
+  </a>
+</li>
+<li class="userpanel-item random">
+  <a class="header-icon" href="/random/anime?random_ref=topbar" token="topbar">
+    <div class="icon-container">
+      <svg viewBox="0 0 48 48">
+        <use xlink:href="/i/svg/header.svg#cr_random"></use>
+      </svg>
+    </div>
+
+    <div class="caption">Random</div>
+  </a>
+</li>
+
+
+                    <li id="header_search_userpanel_item" class="userpanel-item search">
+  <button id="header_show_search_button" class="header-icon" type="button">
+    <div class="icon-container">
+      <svg viewBox="0 0 48 48">
+        <use xlink:href="/i/svg/header.svg#cr_search"></use>
+      </svg>
+    </div>
+
+    <div class="caption">Search</div>
+  </button>
+</li>
+        </ul>
+      </nav>
+    </div>
+
+    <form id="header_search_form" class="header-search-form" action="/search" method="get" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+      <link itemprop="target" href="/search?q={q}">
+
+      <div class="content">
+        <input name="from" type="hidden" value="">
+
+        <input
+          id="header_search_input"
+          class="header-searchbox"
+          autocomplete="off"
+          name="q"
+          placeholder="Anime, drama, etc."
+          type="search"
+          value=""
+          itemprop="query-input"
+        />
+
+        <button
+          id="header_search_submit_beta"
+          class="header-searchbox-submit"
+          title="Search"
+        >
+          <svg viewBox="0 0 48 48">
+            <use xlink:href="/i/svg/header.svg#cr_search"></use>
+          </svg>
+
+          <span class="button-label">Search</span>
+        </button>
+
+        <div id="header_search_autocomplete" class="header-search-autocomplete"> </div>
+      </div>
+    </form>
+  </div>
+</header><!-- header -->
+
+        <div id="template_scroller" class="ad-skin">
+                <div id="template_skin_leaderboard" class="clearfix"><span id="SLB" class="_fwph">
+   <form id="_fw_form_SLB" style="display:none">
+     <input type="hidden" name="_fw_input_SLB" id="_fw_input_SLB" value="ptgt=s&h=160&w=960&tpcl=DISPLAY">
+   </form>
+   <span id="_fw_container_SLB"></span>
+</span>
+</div>
+                    <div id="template_container" class="cf template-container">
+        <div id="template_body" class="cf old-template-body">
+                                                    <div id="message_box" ></div>
+                    <script type="text/javascript">
+            Page.messaging_box_controller = new MessageBox({"render_to": "#message_box"});
+            Page.messaging_box_controller.addItems([{"type":"nag","message_body":"<a href=\"http:\/\/bit.ly\/junitaisen-11-broadcastgen\">The legendary battle royale has reached its climax! Try out Premium today to watch the newest episode of JUNI TAISEN: ZODIAC WAR!<\/a>","message_body_html":"<a href=\"http:\/\/bit.ly\/junitaisen-11-broadcastgen\">The legendary battle royale has reached its climax! Try out Premium today to watch the newest episode of JUNI TAISEN: ZODIAC WAR!<\/a>","data":null}]);
+          </script>
+
+          <div style="height:0;visibility:hidden;" class="clearfix"></div>
+          
+<script type="text/javascript">
+  BrowserCheck.testForCookies();
+</script>
+
+
+<div id="welcome_left">
+  <div class="welcome-featured-media">
+        <!-- check1 -->
+        <!-- check2 -->
+    <div id="featured_carousel" class="banner-carousel"></div>
+    <script>
+      function transformCarouselData(featuredData) {
+        return featuredData.map(function(element, index) {
+          return {
+            "overlay": {
+              "content": {
+                "header": element.series_name,
+                "lead": element.media_name,
+                "description": element.description,
+                "button_text": element.button_text
+              },
+              "link": element.url
+            },
+            "img": element.image
+          }
+        });
+      }
+
+      $(function initializeBannerCarousel() {
+        $('#featured_carousel').bannerCarousel({
+          data: transformCarouselData([{"series_name":"Frogs and the Boys Who Like Them","media_name":"After School Special: Episode 32","description":"Not sure what to think of the last My Hero Academia episode? We're here to school you. Don't be late!","image":"http:\/\/www.crunchyroll.com\/i\/spire3\/79dfd61f876b63af56e792ce49481c9a1502994902_main.jpg","url":"http:\/\/bit.ly\/MHAASSEP32CAROUSEL","button_text":"WATCH NOW","media_id":null},{"series_name":"Study Up for Final Exams!!","media_name":"After School Special: Episode 34","description":"Not sure what to think of the last My Hero Academia episode? We're here to school you. Don't be late!","image":"https:\/\/i.imgur.com\/ZvF0YRS.png","url":"http:\/\/got.cr\/MHAASSEP34CAROUSEL","button_text":"WATCH NOW","media_id":null},{"series_name":"Class is in Session!!","media_name":"ANIME ACADEMY: Fujoshi","description":"Join Reina and Victoria every week as we explore terms and ideas you may see and hear as an anime fan ~","image":"http:\/\/www.crunchyroll.com\/i\/spire1\/ecfc9fee2167a3113628a015f462c2f51494892471_main.jpg","url":"http:\/\/got.cr\/aafujoshicarousel","button_text":"WATCH NOW","media_id":null},{"series_name":"Follow Us!!","media_name":"Join Crunchyroll on Facebook ~ !!","description":"Follow the latest news, find your new favorite anime, and be part of our wonderful community on FACEBOOK!","image":"http:\/\/www.crunchyroll.com\/i\/spire2\/1a7a05cd38199b4c3b37a92cc4e52aa11487964740_main.png","url":"http:\/\/bit.ly\/crunchyroll-facebook","button_text":"FOLLOW","media_id":null},{"series_name":"Crunchyroll Manga Shop is Here!","media_name":"","description":"Now you can purchase and download your favorite manga in the form of digital ebooks!","image":"http:\/\/www.crunchyroll.com\/i\/spire1\/080149404002c2ba4cc0c06ed7528c671489795833_main.png","url":"http:\/\/www.crunchyroll.com\/forumtopic-984767\/crunchyroll-android-app-update-introducing-the-manga-shop","button_text":"More Info","media_id":null},{"series_name":"August Staff Picks!!","media_name":"Find your new FAVORITE ANIME!","description":"Cayla lists some of her favorite anime for the first installment of our new monthly feature, Staff Picks!","image":"http:\/\/i.imgur.com\/d3G2i2J.png","url":"http:\/\/bit.ly\/august-staff-picks-carousel","button_text":"Read More","media_id":null},{"series_name":"BACKSTORY TIME","media_name":"Miss Kobayashi's Dragon Maid","description":"Watch-along with Reina Scully (well, this time Miles) and Victoria Holden for one of the most heartfelt episodes of the...","image":"http:\/\/www.crunchyroll.com\/i\/spire3\/c49a49545ea7e762a00e17460e44ac711490910464_main.jpg","url":"http:\/\/bit.ly\/misskobayashi12broadcast","button_text":"WATCH NOW","media_id":null},{"series_name":"Johnny Weir LOVES Yuri on Ice!!","media_name":"Two-time Olympic figure skater shares...","description":"Did the show hold up to Johnny's on-ice experiences? Will he ever skate to music from YOI? Watch and find out!","image":"http:\/\/www.crunchyroll.com\/i\/spire4\/e89532bbf7daf09a058db4b4f7a1f6821486419680_main.jpg","url":"http:\/\/bit.ly\/weironice","button_text":"WATCH","media_id":null},{"series_name":"Anime by the Numbers","media_name":"Miles Thomas is BACK to build your...","description":"Big Money Miles Thomas is BACK to help you get the most gains out of your Summer 2017 Anime Season! Did you miss out on...","image":"http:\/\/www.crunchyroll.com\/i\/spire2\/84bb1951992456ea684c9c78ff87d0741502125560_main.jpg","url":"http:\/\/got.cr\/AnimeByTheNumbers2","button_text":"WATCH NOW","media_id":null},{"series_name":"Blade Runner Black Out 2022","media_name":"See it first on Crunchyroll!","description":"From the director of Cowboy Bebop and Samurai Champloo comes this anime prequel to Blade Runner 2049.","image":"https:\/\/i.imgur.com\/nl25l1W.png","url":"http:\/\/bit.ly\/bladerunner2-carousel","button_text":"WATCH NOW","media_id":null}]),
+          templates: {
+            skeleton: 'featured_carousel_skeleton',
+            figure: 'featured_carousel_figure',
+            pagination: 'featured_carousel_pagination'
+          },
+          minHeight: 314,
+          initStartDelay: 7500,
+          slideDelay: 7500
+        });
+      });
+    </script>
+    <!-- check3 -->
+        <!-- check4 -->
+        <!-- check5 -->
+  </div>
+
+  
+
+         <div class="welcome-block clearfix">
+  <h1>
+    <a href="/forumcategory-1/site-news" token="welcome_more" title="Site News">
+      Site News    </a>
+  </h1>
+  <div>
+            <div class="welcome-news-item clearfix">
+          <a class="welcome-news-mug" href="/forumtopic-1007641/new-catalog-titles-black-butler-season-2-yu-yu-hakusho-ufo-ultramaiden-valkyrie-excel-saga"><img src="http://img1.ak.crunchyroll.com/i/spire2/328dd25e4ffbab5e713e9f466a760ad61512612677_thumb.jpg"/></a>
+          <div class="welcome-news-info">
+            <a href="/forumtopic-1007641/new-catalog-titles-black-butler-season-2-yu-yu-hakusho-ufo-ultramaiden-valkyrie-excel-saga" class="welcome-news-views">10226</a>
+            <a class="welcome-news-title" href="/forumtopic-1007641/new-catalog-titles-black-butler-season-2-yu-yu-hakusho-ufo-ultramaiden-valkyrie-excel-saga">New Catalog Titles: Black Butler Season 2, Yu Yu Hakusho, UFO Ultramaiden Valkyrie, Excel Saga</a>
+            <div class="welcome-news-subtitle">
+              <div class="byline">
+                Posted by <a href="/user/pikapikanina" title="pikapikanina">pikapikanina</a>                6 days ago              </div>
+              <div class="fb-like-button">
+  <div class="fb-share-button" data-href="http://www.crunchyroll.com/forumtopic-1007641/new-catalog-titles-black-butler-season-2-yu-yu-hakusho-ufo-ultramaiden-valkyrie-excel-saga" data-layout="button"></div>
+</div>
+            </div>
+            <div class="welcome-news-contents">
+              Hello Everyone! 
+ 
+We're excited to announce four catalog titles coming to Crunchyroll today! 
+ 
+1. Black Butler Season 2 is now available for members in United States and Canada. 
+ 
+     
+...            </div>
+            <div class="welcome-news-readmore"><a href="/forumtopic-1007641/new-catalog-titles-black-butler-season-2-yu-yu-hakusho-ufo-ultramaiden-valkyrie-excel-saga" token="welcome_news_readmore">read more &raquo;</a></div>
+          </div>
+        </div>
+            <div class="welcome-news-item clearfix">
+          <a class="welcome-news-mug" href="/forumtopic-1007453/new-manga-simulpub-scums-wish-dcor"><img src="http://img1.ak.crunchyroll.com/i/spire2/323b2250bcb68530c0bbf04b217225f81512501584_thumb.png"/></a>
+          <div class="welcome-news-info">
+            <a href="/forumtopic-1007453/new-manga-simulpub-scums-wish-dcor" class="welcome-news-views">4514</a>
+            <a class="welcome-news-title" href="/forumtopic-1007453/new-manga-simulpub-scums-wish-dcor">New Manga Simulpub: Scum's wish décor</a>
+            <div class="welcome-news-subtitle">
+              <div class="byline">
+                Posted by <a href="/user/pikapikanina" title="pikapikanina">pikapikanina</a>                8 days ago              </div>
+              <div class="fb-like-button">
+  <div class="fb-share-button" data-href="http://www.crunchyroll.com/forumtopic-1007453/new-manga-simulpub-scums-wish-dcor" data-layout="button"></div>
+</div>
+            </div>
+            <div class="welcome-news-contents">
+              Hi Everyone!  
+ 
+Scum's wish décor, a spin-off from the popular manga Scum's wish by mengo yokoyari, is finally here!  
+ 
+We are excited to announce the launch of Scum's wish décor from Square...            </div>
+            <div class="welcome-news-readmore"><a href="/forumtopic-1007453/new-manga-simulpub-scums-wish-dcor" token="welcome_news_readmore">read more &raquo;</a></div>
+          </div>
+        </div>
+            <div class="welcome-news-item clearfix">
+          <a class="welcome-news-mug" href="/forumtopic-1007121/new-catalog-titles-kiddy-grade-inari-kon-kon-oh-edo-rocket-d-frag-solty-rei"><img src="http://img1.ak.crunchyroll.com/i/spire2/2d25f3bfc94bbfca4999f73cce2df78a1512093864_thumb.png"/></a>
+          <div class="welcome-news-info">
+            <a href="/forumtopic-1007121/new-catalog-titles-kiddy-grade-inari-kon-kon-oh-edo-rocket-d-frag-solty-rei" class="welcome-news-views">15950</a>
+            <a class="welcome-news-title" href="/forumtopic-1007121/new-catalog-titles-kiddy-grade-inari-kon-kon-oh-edo-rocket-d-frag-solty-rei">New Catalog Titles: Kiddy Grade, Inari Kon Kon, Oh! Edo Rocket, D-Frag!, Solty Rei</a>
+            <div class="welcome-news-subtitle">
+              <div class="byline">
+                Posted by <a href="/user/lugiamania" title="lugiamania">lugiamania</a>                13 days ago              </div>
+              <div class="fb-like-button">
+  <div class="fb-share-button" data-href="http://www.crunchyroll.com/forumtopic-1007121/new-catalog-titles-kiddy-grade-inari-kon-kon-oh-edo-rocket-d-frag-solty-rei" data-layout="button"></div>
+</div>
+            </div>
+            <div class="welcome-news-contents">
+              11/30/17 
+ 
+More catalog titles have landed at Crunchyroll today, this time from our friends over at Nozomi Entertainment! All titles are now available for members in the US and Canada. 
+ 
+Big...            </div>
+            <div class="welcome-news-readmore"><a href="/forumtopic-1007121/new-catalog-titles-kiddy-grade-inari-kon-kon-oh-edo-rocket-d-frag-solty-rei" token="welcome_news_readmore">read more &raquo;</a></div>
+          </div>
+        </div>
+            <div class="welcome-news-item clearfix">
+          <a class="welcome-news-mug" href="/forumtopic-1006465/crunchyroll-movie-night-black-clover-makes-its-theatrical-debut"><img src="http://img1.ak.crunchyroll.com/i/spire1/7c8f721696d254c1d4ffea675a55bc1c1511222330_thumb.png"/></a>
+          <div class="welcome-news-info">
+            <a href="/forumtopic-1006465/crunchyroll-movie-night-black-clover-makes-its-theatrical-debut" class="welcome-news-views">9346</a>
+            <a class="welcome-news-title" href="/forumtopic-1006465/crunchyroll-movie-night-black-clover-makes-its-theatrical-debut">Crunchyroll Movie Night: Black Clover Makes its Theatrical Debut</a>
+            <div class="welcome-news-subtitle">
+              <div class="byline">
+                Posted by <a href="/user/majodere" title="majodere">majodere</a>                22 days ago              </div>
+              <div class="fb-like-button">
+  <div class="fb-share-button" data-href="http://www.crunchyroll.com/forumtopic-1006465/crunchyroll-movie-night-black-clover-makes-its-theatrical-debut" data-layout="button"></div>
+</div>
+            </div>
+            <div class="welcome-news-contents">
+              Did you hear? Fall’s biggest anime, Black Clover, is coming to the big screen -- and tickets are on sale now!  
+  
+To purchase your tickets, head on over to CrunchyrollMovieNight.com and locate...            </div>
+            <div class="welcome-news-readmore"><a href="/forumtopic-1006465/crunchyroll-movie-night-black-clover-makes-its-theatrical-debut" token="welcome_news_readmore">read more &raquo;</a></div>
+          </div>
+        </div>
+            <div class="welcome-news-item clearfix">
+          <a class="welcome-news-mug" href="/forumtopic-1005957/new-catalog-titles-yu-yu-hakusho-ouran-high-school-host-club-the-galaxy-railways-yu-gi-oh-arc-v"><img src="http://img1.ak.crunchyroll.com/i/spire4/83e3eece125e5ddb454ba920e69022dd1510970498_thumb.png"/></a>
+          <div class="welcome-news-info">
+            <a href="/forumtopic-1005957/new-catalog-titles-yu-yu-hakusho-ouran-high-school-host-club-the-galaxy-railways-yu-gi-oh-arc-v" class="welcome-news-views">43460</a>
+            <a class="welcome-news-title" href="/forumtopic-1005957/new-catalog-titles-yu-yu-hakusho-ouran-high-school-host-club-the-galaxy-railways-yu-gi-oh-arc-v">New Catalog Titles: Yu Yu Hakusho, Ouran High School Host Club, The Galaxy Railways, Yu-Gi-Oh! Arc V</a>
+            <div class="welcome-news-subtitle">
+              <div class="byline">
+                Posted by <a href="/user/lugiamania" title="lugiamania">lugiamania</a>                26 days ago              </div>
+              <div class="fb-like-button">
+  <div class="fb-share-button" data-href="http://www.crunchyroll.com/forumtopic-1005957/new-catalog-titles-yu-yu-hakusho-ouran-high-school-host-club-the-galaxy-railways-yu-gi-oh-arc-v" data-layout="button"></div>
+</div>
+            </div>
+            <div class="welcome-news-contents">
+              Get ready for more LOVE MAKING as the OVA for Cute High Earth Defense Club LOVE! is NOW AVAILABLE for members worldwide ex Asia! 
+ 
+   
+The city of Binan, somewhere in northern Kanto. 
+ 
+The...            </div>
+            <div class="welcome-news-readmore"><a href="/forumtopic-1005957/new-catalog-titles-yu-yu-hakusho-ouran-high-school-host-club-the-galaxy-railways-yu-gi-oh-arc-v" token="welcome_news_readmore">read more &raquo;</a></div>
+          </div>
+        </div>
+      </div>
+  <div class="welcome-more-bottom">
+    <a href="/forumcategory-1/site-news" token="welcome_more">see more site news &raquo;</a>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+<div id="welcome_right">
+    <div id="sidebar">
+                    <h3>Featured Shows</h3>
+    <ul class="landscape-grid shows js-featured-show-list">
+                  <li itemscope itemtype="http://schema.org/TVSeries" class="group-item" group_id="269419">
+      <div class="hover-toggle-queue wrapper hover-classes" data-classes="container-shadow">
+        <a data-position="0"
+           title="Noblesse: Awakening"
+           token="shows-featured-landscapes"
+           itemprop="url"
+           href="/noblesse-awakening"
+           class="landscape-element block-link cf titlefix js-featured-show-link">
+          <img itemprop="photo"
+               alt="Noblesse: Awakening"
+               src="http://img1.ak.crunchyroll.com/i/spire4/2e37aa89ba3bca2be2265ee39557ef331454568861_small.jpg"
+               class="portrait medium-margin-right left"/>
+          <div class="series-info left">
+            <span itemprop="name" class="series-title block ellipsis" dir="auto">Noblesse: Awakening</span>
+            <span class="series-data block">
+                          </span>
+          </div>
+        </a>
+      </div>
+    </li>
+                      <li itemscope itemtype="http://schema.org/TVSeries" class="group-item" group_id="239176">
+      <div class="hover-toggle-queue wrapper hover-classes" data-classes="container-shadow">
+        <a data-position="1"
+           title="The Live Show"
+           token="shows-featured-landscapes"
+           itemprop="url"
+           href="/the-live-show"
+           class="landscape-element block-link cf titlefix js-featured-show-link">
+          <img itemprop="photo"
+               alt="The Live Show"
+               src="http://img1.ak.crunchyroll.com/i/spire4/b993302b05309a7328d7f53eb66e50c91326411718_small.png"
+               class="portrait medium-margin-right left"/>
+          <div class="series-info left">
+            <span itemprop="name" class="series-title block ellipsis" dir="auto">The Live Show</span>
+            <span class="series-data block">
+                          </span>
+          </div>
+        </a>
+      </div>
+    </li>
+                      <li itemscope itemtype="http://schema.org/TVSeries" class="group-item" group_id="151168">
+      <div class="hover-toggle-queue wrapper hover-classes" data-classes="container-shadow">
+        <a data-position="2"
+           title="Japanese Anime Classic Collection"
+           token="shows-featured-landscapes"
+           itemprop="url"
+           href="/japanese-anime-classic-collection"
+           class="landscape-element block-link cf titlefix js-featured-show-link">
+          <img itemprop="photo"
+               alt="Japanese Anime Classic Collection"
+               src="http://img1.ak.crunchyroll.com/i/spire3/241b811798128ecfe81324f113a9ae5d1389904174_small.jpg"
+               class="portrait medium-margin-right left"/>
+          <div class="series-info left">
+            <span itemprop="name" class="series-title block ellipsis" dir="auto">Japanese Anime Classic Collection</span>
+            <span class="series-data block">
+                          </span>
+          </div>
+        </a>
+      </div>
+    </li>
+                      <li itemscope itemtype="http://schema.org/TVSeries" class="group-item" group_id="253483">
+      <div class="hover-toggle-queue wrapper hover-classes" data-classes="container-shadow">
+        <a data-position="3"
+           title="Zapuni"
+           token="shows-featured-landscapes"
+           itemprop="url"
+           href="/zapuni"
+           class="landscape-element block-link cf titlefix js-featured-show-link">
+          <img itemprop="photo"
+               alt="Zapuni"
+               src="http://img1.ak.crunchyroll.com/i/spire3/d1a01eb24de54b08c7507220b8e567701362765044_small.jpg"
+               class="portrait medium-margin-right left"/>
+          <div class="series-info left">
+            <span itemprop="name" class="series-title block ellipsis" dir="auto">Zapuni</span>
+            <span class="series-data block">
+                          </span>
+          </div>
+        </a>
+      </div>
+    </li>
+                      <li itemscope itemtype="http://schema.org/TVSeries" class="group-item" group_id="267407">
+      <div class="hover-toggle-queue wrapper hover-classes" data-classes="container-shadow">
+        <a data-position="4"
+           title="Crunchycast"
+           token="shows-featured-landscapes"
+           itemprop="url"
+           href="/crunchycast"
+           class="landscape-element block-link cf titlefix js-featured-show-link">
+          <img itemprop="photo"
+               alt="Crunchycast"
+               src="http://img1.ak.crunchyroll.com/i/spire3/b82f3cf7dcf72860c5150cdbe4a42b201439328030_small.jpg"
+               class="portrait medium-margin-right left"/>
+          <div class="series-info left">
+            <span itemprop="name" class="series-title block ellipsis" dir="auto">Crunchycast</span>
+            <span class="series-data block">
+                          </span>
+          </div>
+        </a>
+      </div>
+    </li>
+              </ul>
+  </div>
+
+  
+      <div class="welcome-block">
+      <h1>
+        <a href="/lineup">
+          Fall 2017 Simulcast Lineup        </a>
+      </h1>
+      <div style="padding:4px;margin:6px 0 0 0;border:1px solid orange;background-color:#FFF6CF;font-size:13px;text-align:center;">
+        <a href="/lineup">View the Fall 2017 Lineup</a>, and check back daily as we announce all new titles this week.      </div>
+    </div>
+  
+        <div class="welcome-block">
+    <h1>
+      <a href="/forum" token="welcome_more">
+        Forum      </a>
+    </h1>
+    <a class="welcome-more" href="/forum" token="welcome_more">more</a>
+
+        <h2 class="welcome-forum-category">
+      <a href="/forumcategory-3/anime">
+        Anime      </a>
+    </h2>
+    <div class="welcome-pulse-box">
+            <a href="/forumtopic-647851/anime-motivational-posters-read-first-post" token="welcome" title="Anime Motivational Posters (READ FIRST POST)" class="clearfix">
+        <span class="welcome-pulse-title">
+          Anime Motivational Posters (READ FIRST…        </span>
+        <span class="welcome-pulse-date">
+          7 mins        </span>
+      </a>
+            <a href="/forumtopic-1002373/love-is-like-a-cocktail-discussion" token="welcome" title="Love is Like a Cocktail Discussion" class="clearfix">
+        <span class="welcome-pulse-title">
+          Love is Like a Cocktail Discussion        </span>
+        <span class="welcome-pulse-date">
+          47 min        </span>
+      </a>
+            <a href="/forumtopic-679289/post-the-anime-youve-watched-today" token="welcome" title="Post the anime you've watched today" class="clearfix">
+        <span class="welcome-pulse-title">
+          Post the anime you've watched today        </span>
+        <span class="welcome-pulse-date">
+          48 min        </span>
+      </a>
+            <a href="/forumtopic-1002369/food-wars-the-third-plate-discussion" token="welcome" title="Food Wars! The Third Plate Discussion" class="clearfix">
+        <span class="welcome-pulse-title">
+          Food Wars! The Third Plate Discussion        </span>
+        <span class="welcome-pulse-date">
+          53 min        </span>
+      </a>
+            <a href="/forumtopic-963635/animemanga-character-face-off" token="welcome" title="♔⚔Anime/Manga Character Face-Off⚔♔" class="clearfix">
+        <span class="welcome-pulse-title">
+          ♔⚔Anime/Manga Character Face-Off⚔♔        </span>
+        <span class="welcome-pulse-date">
+          1 hr        </span>
+      </a>
+            <a href="/forumtopic-2/favorite-anime" token="welcome" title="Favorite Anime" class="clearfix">
+        <span class="welcome-pulse-title">
+          Favorite Anime        </span>
+        <span class="welcome-pulse-date">
+          1 hr        </span>
+      </a>
+            <a href="/forumtopic-912753/-tourney-chatroom-directory-" token="welcome" title="•ᴗ•) ☕ Tourney CHATROOM &amp; Directory ☕ (•ᴗ•" class="clearfix">
+        <span class="welcome-pulse-title">
+          •ᴗ•) ☕ Tourney CHATROOM &amp; Directory ☕…        </span>
+        <span class="welcome-pulse-date">
+          1 hr        </span>
+      </a>
+            <a href="/forumtopic-1008137/mirai-no-mirai-mirai-from-the-future" token="welcome" title="Mirai no Mirai (Mirai From the Future)." class="clearfix">
+        <span class="welcome-pulse-title">
+          Mirai no Mirai (Mirai From the Future).        </span>
+        <span class="welcome-pulse-date">
+          2 hrs        </span>
+      </a>
+            <a href="/forumtopic-803801/the-official-guest-pass-thread-read-opening-post-first" token="welcome" title="The Official Guest Pass Thread (Read opening post first)" class="clearfix">
+        <span class="welcome-pulse-title">
+          The Official Guest Pass Thread (Read o…        </span>
+        <span class="welcome-pulse-date">
+          2 hrs        </span>
+      </a>
+            <a href="/forumtopic-1008111/smoking-in-anime" token="welcome" title="Smoking in anime? " class="clearfix">
+        <span class="welcome-pulse-title">
+          Smoking in anime?         </span>
+        <span class="welcome-pulse-date">
+          2 hrs        </span>
+      </a>
+          </div>
+          <h2 class="welcome-forum-category">
+      <a href="/forumcategory-25/manga">
+        Manga      </a>
+    </h2>
+    <div class="welcome-pulse-box">
+            <a href="/forumtopic-670668/last-mangachapter-you-read" token="welcome" title="Last Manga/Chapter You Read" class="clearfix">
+        <span class="welcome-pulse-title">
+          Last Manga/Chapter You Read        </span>
+        <span class="welcome-pulse-date">
+          52 min        </span>
+      </a>
+            <a href="/forumtopic-1000647/what-are-the-best-romance-manga-out-there" token="welcome" title="What are the best romance manga out there? " class="clearfix">
+        <span class="welcome-pulse-title">
+          What are the best romance manga out th…        </span>
+        <span class="welcome-pulse-date">
+          6 hrs        </span>
+      </a>
+            <a href="/forumtopic-809337/weekly-shonen-jump-rankings" token="welcome" title="Weekly Shonen Jump Rankings" class="clearfix">
+        <span class="welcome-pulse-title">
+          Weekly Shonen Jump Rankings        </span>
+        <span class="welcome-pulse-date">
+          7 hrs        </span>
+      </a>
+            <a href="/forumtopic-808767/shingeki-no-kyojin-attack-on-titan-manga" token="welcome" title="Shingeki No Kyojin (Attack on Titan) Manga" class="clearfix">
+        <span class="welcome-pulse-title">
+          Shingeki No Kyojin (Attack on Titan) M…        </span>
+        <span class="welcome-pulse-date">
+          1 day        </span>
+      </a>
+            <a href="/forumtopic-960315/manga-that-you-love-but-no-one-else-has-heard-of" token="welcome" title="Manga that you love, but no one else has heard of." class="clearfix">
+        <span class="welcome-pulse-title">
+          Manga that you love, but no one else h…        </span>
+        <span class="welcome-pulse-date">
+          2 days        </span>
+      </a>
+            <a href="/forumtopic-827393/shokugeki-no-soma-discussions" token="welcome" title="Shokugeki no Soma Discussions" class="clearfix">
+        <span class="welcome-pulse-title">
+          Shokugeki no Soma Discussions        </span>
+        <span class="welcome-pulse-date">
+          2 days        </span>
+      </a>
+            <a href="/forumtopic-762018/show-your-manga-collection" token="welcome" title="Show YOUR Manga Collection!" class="clearfix">
+        <span class="welcome-pulse-title">
+          Show YOUR Manga Collection!        </span>
+        <span class="welcome-pulse-date">
+          2 days        </span>
+      </a>
+            <a href="/forumtopic-1000763/seven-seas-is-licensing-too-many-series-the-next-tokyo-pop" token="welcome" title="Seven Seas is licensing TOO MANY series. The next Tokyo Pop?" class="clearfix">
+        <span class="welcome-pulse-title">
+          Seven Seas is licensing TOO MANY serie…        </span>
+        <span class="welcome-pulse-date">
+          2 days        </span>
+      </a>
+            <a href="/forumtopic-867581/my-hero-academia" token="welcome" title="My Hero Academia" class="clearfix">
+        <span class="welcome-pulse-title">
+          My Hero Academia        </span>
+        <span class="welcome-pulse-date">
+          3 days        </span>
+      </a>
+            <a href="/forumtopic-828647/one-piece-manga-discussion" token="welcome" title="ONE PIECE Manga discussion " class="clearfix">
+        <span class="welcome-pulse-title">
+          ONE PIECE Manga discussion         </span>
+        <span class="welcome-pulse-date">
+          3 days        </span>
+      </a>
+          </div>
+        
+    <div class="welcome-more-bottom">
+      <a href="/forum" token="welcome_more">more forum topics &raquo;</a>
+    </div>
+  </div>
+    
+
+  
+
+  
+  
+    <div class="welcome-recent-episodes">
+    <h1 class="welcome-recent-link">
+      <a href="/naruto-shippuden" token="welcome_more" title="Naruto Shippuden Episodes">Naruto Shippuden Episodes</a>
+    </h1>
+        <ul>
+          </ul>
+      </div>
+  
+  
+  
+</div>
+<script type="text/javascript">
+  var qs = 't=px&v=fp&k=' + Math.floor(Math.random()*1000000) + '&p=n';
+  document.write(unescape("%3Cimg%20class%3D%22pxl-tracker-img%22%20src%3D%22/tracker%3F") + qs + unescape("%22%20style%3D%22position%3A%20absolute%3B%20left%3A%20-50000px%3B%20visibility%3A%20hidden%3B%22%20/%3E"));
+</script>
+
+<script type="text/javascript">
+  $('.welcome-simulcasts .welcome-simulcasts-collection .name').dotdotdot();
+  $('.welcome-deal-name').dotdotdot();
+</script>
+
+<script type="text/javascript">
+$(window).load(function(){function e(){return $("#template_skin_leaderboard").height()===0}function t(e,t,n){document.cookie=e+"="+encodeURIComponent(t)+"; expires="+n.toGMTString()}function n(e){var t=document.cookie.split("; ");var n=null;var r={};for(var i=t.length-1;i>=0;i--){n=t[i].split("=");r[n[0]]=n[1]}if(r[e]){return decodeURIComponent(r[e])}return null}function r(){var e=new Date;e.setHours(24,0,0,0);t("blockTrack",1,e)}function i(){return n("blockTrack")||0}function s(){if(navigator.cookieEnabled){return true}document.cookie="cookieTest=1";var e=document.cookie.indexOf("cookieTest=")!==-1;document.cookie="cookieTest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";return e}function o(){return 'AS';}function u(){$.get("/tracker?t=log&b=cr_adbl_"+o()+"&sb=unique_block")}function a(){$.get("/tracker?t=log&b=cr_adbl_"+o()+"&sb=unique")}function f(){$.get("/tracker?t=log&b=cr_adbl_"+o()+"&sb=load")}function l(){$.get("/tracker?t=log&b=cr_adbl_"+o()+"&sb=load_block")}var c=true;if(c){f();if(e()){l()}if(!i()&&s()){a();if(e()){u()}r()}}})
+</script>
+
+<script src="vendor/CookieJS/cookie.min.js?v=59059d4b2c1e7e7ebab3b625ee00f4a925ed1a5c"></script>
+<script src="vendor/handlebars/handlebars.min.js?v=59059d4b2c1e7e7ebab3b625ee00f4a925ed1a5c"></script>
+
+<script type="text/x-handlebars-template" id="handlebars_featured_carousel_skeleton">
+<div class="carousel-viewport viewport">
+  <div class="carousel-arrow-hitarea carousel-arrow-hitarea-left" data-arrow="left">
+    <div class="carousel-arrow carousel-arrow-left"></div>
+  </div>
+  <div class="carousel-arrow-hitarea carousel-arrow-hitarea-right" data-arrow="right">
+    <div class="carousel-arrow carousel-arrow-right"></div>
+  </div>
+  <div class="slider-container"></div>
+</div>
+</script>
+<script type="text/x-handlebars-template" id="handlebars_featured_carousel_figure">
+  <div class="slide slide-{{ slideNumber }}" data-slide="{{ slideNumber }}">
+    <div class="img" style="background-image: url({{ backgroundImgUrl }})"></div>
+    <div class="blur"></div>
+    <div class="overlay dark-overlay">
+      <a class="js-banner-slide" href="{{ overlay.link }}" data-name="{{ overlay.content.header }}">
+        <div class="overlay-content">
+          <div class="caption">
+            <h2 class="carousel-headline">{{ overlay.content.header }}</h2>
+            <p class="carousel-lead">{{ overlay.content.lead }}</p>
+            <p class="carousel-text">{{ overlay.content.description }}</p>
+          </div>
+          <div class="overlay-action">
+            <span>{{ overlay.content.button_text }}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</script>
+<script type="text/x-handlebars-template" id="handlebars_featured_carousel_pagination">
+<nav class="carousel-nav">
+  {{#slideNumbers}}
+    <div data-slide="{{ slideNumber }}" class="nav-con"><span></span></div>
+  {{/slideNumbers}}
+</nav>
+</script>
+
+<script src="vendor/jquery.banner_carousel/dist/jquery.banner_carousel.min.js?v=59059d4b2c1e7e7ebab3b625ee00f4a925ed1a5c"></script>
+
+<script>
+  var ga = ga || function noop() {
+      // Intentional no op
+  };
+
+  $(function setUpAnalytics() {
+    $('#ecom_deal_img_div').on('click', 'a', function trackDailyDeal() {
+      ga('send', 'event', 'homepage', 'ecomm-mrec', 'click');
+      ga('send', 'event', 'home_daily_deal', '', this.href);
+    });
+
+    $('#featured_carousel').on('click', '.js-banner-slide', function trackCarouselSlide() {
+      ga('send', 'event', 'homepage', 'hero-box', 'click');
+    }).on('click', '.carousel-arrow-hitarea', function trackCarouselChange() {
+      ga('send', 'event', 'home_carousel', this.dataset.arrow);
+    });
+
+    $('.js-featured-show-list').on('click', '.js-featured-show-link', function trackFeaturedShows() {
+      ga('send', 'event', 'hime_featured_shows', this.dataset.position, this.title);
+    });
+
+    $('.js-simulcast-block').on('click', '.js-simulcast-series-link', function trackSimulcastSeries() {
+      ga('send', 'event', 'home_simulcasts', '', this.dataset.seriesName + ":");
+    }).on('click', '.js-simulcast-episode-link', function trackSimulcastEpisode() {
+      ga('send', 'event', 'home_simulcasts', '', this.dataset.seriesName + ":" + this.dataset.episodeName);
+    });
+
+    $('#template_scroller').on('click', '#template_skin_splashlink', function trackAdSkin() {
+      ga('send', 'event', 'home_sidebar', 'side', this.href);
+    });
+
+    $('#_fw_container_SLB').on('click', 'a', function trackLeaderBoard() {
+      ga('send', 'event', 'home_sidebar', 'top', this.href);
+    });
+  });
+</script>
+        </div>
+                                        
+<div id="footer" class="cf container-shadow-bottom">
+  <div id="footer_menu" class="clearfix">
+    <div class="footer-categories-container">
+      <div class="footer-column footer-mobile-hide">
+        <h6>Popular Shows</h6>
+        <ul dir="auto">
+          
+            <li><a href="/noblesse-awakening" token="bottombar">Noblesse: Awakening</a></li>
+            <li><a href="/crunchycast" token="bottombar">Crunchycast</a></li>
+            <li><a href="/japanese-anime-classic-collection" token="bottombar">Japanese Anime Classic Collection</a></li>
+            <li><a href="/zapuni" token="bottombar">Zapuni</a></li>
+            <li><a href="/the-live-show" token="bottombar">The Live Show</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-mobile-hide">
+        <h6>Platforms and Devices</h6>
+        <ul>
+          <li><a href="/devices#wiiu" token="bottombar">Wii U</a></li>
+          <li><a href="/devices#chromecast" token="bottombar">Chromecast</a></li>
+          <li><a href="/devices#xboxone" token="bottombar">Xbox One</a></li>
+          <li><a href="/devices#xbox360" token="bottombar">Xbox 360</a></li>
+          <li><a href="/devices#ps4" token="bottombar">PlayStation 4</a></li>
+          <li><a href="/devices#ps3" token="bottombar">PlayStation 3</a></li>
+          <li><a href="/devices#vita" token="bottombar">Playstation Vita</a></li>
+          <li><a href="/devices#ios" token="bottombar">Apple iOS</a></li>
+          <li><a href="/devices#android" token="bottombar">Android</a></li>
+          <li><a href="/devices#winphone" token="bottombar">Windows Phone</a></li>
+          <li><a href="/devices#appletv" token="bottombar">Apple TV</a></li>
+          <li><a href="/devices#roku" token="bottombar">Roku Box</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h6>Premium Memberships</h6>
+        <ul>
+          <li>
+            <a href="/freetrial?from=bottombar" id="footer_two_week_free_trial">
+              Two-Week Free Trial            </a>
+          </li>
+
+          <li>
+            <a href="/en/premium_comparison?src=bottombar" id="footer_compare_plans">
+              Compare Plans            </a>
+          </li>
+
+          <li>
+            <a href="/store/p/163389/Premium-Membership-Gift-One-Month?src=bottombar">
+              Gift Memberships            </a>
+          </li>
+
+          <li>
+            <a href="http://vrv.co/redeemcrunchyroll">
+              Redeem Crunchyroll/VRV Gift Card            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h6>Language                                        <img id="footer_country_flag" src="http://static.ak.crunchyroll.com/i/country_flags/jp.gif"
+                     alt="Japan"
+                     title="Your detected location is Japan." />
+                    </h6>
+        <ul id="footer_language_list" class="footer-language">
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;enUS&quot;);" data-language="English (US)" class="selected">English (US)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;enGB&quot;);" data-language="English (UK)">English (UK)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;esLA&quot;);" data-language="Español">Español</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;esES&quot;);" data-language="Español (España)">Español (España)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;ptBR&quot;);" data-language="Português (Brasil)">Português (Brasil)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;ptPT&quot;);" data-language="Português (Portugal)">Português (Portugal)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;frFR&quot;);" data-language="Français (France)">Français (France)</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;deDE&quot;);" data-language="Deutsch">Deutsch</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;arME&quot;);" data-language="العربية">العربية</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;itIT&quot;);" data-language="Italiano">Italiano</a></li>
+                          <li><a href="#" onclick="return Localization.SetLang(&quot;ruRU&quot;);" data-language="Русский">Русский</a></li>
+                    </ul>
+      </div>
+
+      <div class="footer-column">
+        <h6>Support</h6>
+        <ul>
+          <li><a href="https://crunchyroll.zendesk.com/hc" token="bottombar">Help/FAQ</a></li>
+          <li><a href="/outreach" token="bottombar">Outreach</a></li>
+        </ul>
+              </div>
+
+      <div class="footer-column">
+        <h6>Crunchyroll</h6>
+        <ul>
+          <li><a href="/en/about" token="bottombar">About</a></li>
+          <li><a href="/jobs" token="bottombar">Jobs</a></li>
+          <li><a href="/advertising" token="bottombar">Advertising</a></li>
+                    <li><a href="/dmca_policy" token="bottombar">Copyright Policy</a></li>
+          <li><a href="/tos" token="bottombar">Terms of Service</a></li>
+          <li><a href="/privacy" token="bottombar">Privacy Policy <span class="new-footer">New</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="social_media">
+      <div class="footer-column">
+        <a href="/feed" token="bottombar">
+          <img class="icon" src="http://static.ak.crunchyroll.com/i/rss.png" alt="rss" />
+        </a>
+        <a href="/feed" token="bottombar">RSS</a>
+      </div>
+      <div class="footer-column">
+        <a href="https://twitter.com/Crunchyroll" class="twitter-follow-button" data-show-count="false">Follow @Crunchyroll</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div class="footer-column">
+        <div class="fb-like" data-href="https://www.facebook.com/Crunchyroll" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+      </div>
+      <div class="footer-column">
+        <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/106460836780899737568" data-rel="publisher"></div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+<script>
+(function() {
+  function async_load(script_url){
+    var protocol = ('https:' === document.location.protocol ? 'https://' : 'http://');
+    var s = document.createElement('script'); s.src = protocol + script_url;
+    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    }
+  bm_website_code = '2DAB5A90F97C47A6';
+  jQuery(document).ready(function(){async_load('asset.pagefair.com/measure.min.js')});
+  jQuery(document).ready(function(){async_load('asset.pagefair.net/ads.min.js')});
+})();
+</script>              </div>
+    </div>
+
+          <span id="SKIN" class="_fwph">
+   <form id="_fw_form_SKIN" style="display:none">
+     <input type="hidden" name="_fw_input_SKIN" id="_fw_input_SKIN" value="ptgt=s&h=1&w=1&tpcl=DISPLAY">
+   </form>
+   <span id="_fw_container_SKIN"></span>
+</span>
+            
+<script type="text/javascript">
+$(document).ready(function(e) {
+  // temp_ad
+  var cookie = readCookie('temp_ad_closed');
+
+  // show ad if no cookie is set
+  if(cookie == 1){
+    $('#temp_ad').hide();
+    killAd();
+  }else{
+    $('#temp_ad').show();
+  }
+
+  function tempAd(){
+    var contentOffset = $('#template_body').offset();
+    var contentWidth = $('#template_body').width();
+    var windowWidth = $(window).width();
+    var tempAdv = $('#temp_ad');
+    tempAdv.offset({left: contentOffset.left + contentWidth - 180});
+  }
+  tempAd();
+  $(window).resize(function(){
+    tempAd();
+  });
+  $('#temp_ad').hover(function(){
+    $(this).stop().animate({
+      opacity: 1,
+      bottom: 0
+    },500,function(){
+      $(this).find('.close').fadeIn(200);
+    });
+  },function(){
+    $(this).find('.close').fadeOut(200);
+    $(this).stop().animate({
+      opacity: 0.85,
+      bottom: -140
+    },500,function(){});
+  });
+
+  function killAd(){
+    $('#temp_ad').fadeOut(400, function(){
+      $('#temp_ad').remove();
+    });
+  }
+
+  $('#temp_ad .close').click(function(){
+    killAd();
+    createCookie('temp_ad_closed',1,7);
+  });
+  // end of temp_ad code
+
+  $('a').each(function() {
+    trackToken(this);
+  });
+  CharacterCounter.Init();
+  
+  if($('.main-page').css('background-image') == 'none'){
+    $('.template-container').addClass('no-adskin');
+  }
+});
+
+$(window).bind('beforeunload',function () {
+  if (Page.warnOnLeavingPageMessage) {
+    return Page.warnOnLeavingPageMessage;
+  }
+});
+
+$.fn.followTo = function (pos) {
+  var $this = this,
+      $window = $(window);
+
+  $this.css({
+    'background-position': 'center ' + pos + 'px',
+    'background-attachment': 'scroll'
+  });
+
+  $window.scroll(function (e) {
+    if ($window.scrollTop() > pos) {
+      $this.css({
+        'background-position': 'center 0px',
+        'background-attachment': 'fixed'
+      });
+    } else {
+      $this.css({
+        'background-position': 'center ' + pos + 'px',
+        'background-attachment': 'scroll'
+      });
+    }
+  });
+};
+$('body').followTo(60);
+
+gapi.plusone.go();
+</script>
+    <script>
+  var is_premium = false;
+  var ga = ga || function noop() {
+    // Do nothing
+  };
+
+  $('#header_search_input').on('click', function trackSearch() {
+    ga('send', 'event', 'homepage', 'search', 'click');
+  });
+
+
+  $('#header_account_settings').on('click', function trackAccountSettings() {
+    if (is_premium) {
+      ga('send', 'event', 'Cancel', 'Cancel.Settings.click');
+    }
+  });
+
+  if (Components.adBlockerAnalyticsStrategy) {
+    Components.adBlockerAnalyticsStrategy.shouldLog()
+      .then(function sendAdBlockEvent(adWasBlocked) {
+        if (adWasBlocked) {
+          ga('send', 'event', 'ads', 'blocked');
+        }
+      })
+      .catch(function noop() {});
+  }
+</script>
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+  _qevents.push({
+    qacct:"p-2c9Xi7EeE3Hx2"
+  });
+</script>
+<noscript>
+  <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-2c9Xi7EeE3Hx2.gif" border="0" height="1" width="1" alt="Quantcast"/>
+  </div>
+</noscript>
+
+
+<script>
+  _qoptions={qacct:"p-3dS1tJBAkHGb6",labels:"_fp.event.Homepage"};
+</script>
+<script src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+  <img src="http://pixel.quantserve.com/pixel/p-3dS1tJBAkHGb6.gif?labels=_fp.event.Homepage" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<script type="text/javascript">
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "7021617" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="//sb.scorecardresearch.com/p?c1=2&amp;c2=7021617&amp;cv=2.0&amp;cj=1" />
+</noscript>
+
+
+<div style="display: none;">
+  <script>
+    /* <![CDATA[ */
+    var google_conversion_id = 982007020;
+    var google_conversion_format = "3";
+    var google_remarketing_only = true;
+      var google_conversion_value = 0;
+          /* ]]> */
+  </script>
+  <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+  <noscript>
+    <div style="display: inline;">
+      <img height="1" width="1" style="border-style: none;" alt=""
+           src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/982007020/?guid=ON&amp;script=0&amp;value=0"/>
+    </div>
+  </noscript>
+</div>
+<script>
+  adroll_adv_id = "S3XDMOUT55F43EDQZFISDA";
+  adroll_pix_id = "3GKIBNN7JBASTNGN7GWJBD";
+  (function () {
+    var oldonload = window.onload;
+    window.onload = function () {
+      __adroll_loaded = true;
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      ((document.getElementsByTagName('head') || [null])[0] ||
+      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      if (oldonload) {
+        oldonload()
+      }
+    };
+  }());
+</script>
+
+<script src="//platform.twitter.com/oct.js"></script>
+<script>
+  twttr.conversion.trackPid('l4wzz');
+</script>
+<noscript>
+  <img height="1" width="1" style="display: none;" alt=""
+       src="https://analytics.twitter.com/i/adsct?txn_id=l4wzz&p_id=Twitter"/>
+  <img height="1" width="1" style="display: none;" alt="" src="//t.co/i/adsct?txn_id=l4wzz&p_id=Twitter"/>
+</noscript>
+
+<script>
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function setUpTruoptikTracking() {
+    if (!Components.TruoptikTrackingFacade) {
+      return;
+    }
+
+    var truoptikFacade = new Components.TruoptikTrackingFacade();
+
+    truoptikFacade.initialize().then(function() {
+      truoptikFacade.sendCustomData({"email":null,"name":null,"date_of_birth":null,"gender":null,"premium_status":"free","country_code":"JP"});
+    });
+  });
+</script><script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+    analytics.load("KC3ITMkcWCrn2dZrMXlkjNQBaFSB9ilG");
+
+          analytics.identify();
+    
+    setTimeout(function () {
+      var page_metadata = Object.assign({
+        channelName: '',
+        modal: '',
+        referrer: document.referrer,
+        pageLoadTime: ''
+      }, {"experiment":"","isAuthenticated":false});
+
+      analytics.page(page_metadata);
+    }, 0);
+  }}();
+
+  var segment = {
+    track: function () {
+      this.trackLoginSelected();
+      this.trackLoginFailed();
+      this.trackLoginRequested();
+
+      this.trackRegistrationSelected();
+      this.trackRegistrationFailed();
+      this.trackRegistrationRequested();
+      this.trackLinkAccountPermissionsAgreed();
+      this.trackLinkAccountPermissionsDisagree();
+      this.trackLinkAccountRequested();
+
+      this.trackPaymentInfoSelected();
+      this.trackUpsellSelected();
+      this.trackSubscriptionSelected();
+      this.trackSubscriptionRequested();
+      this.trackFreeTrialSelected();
+    },
+
+    trackLoginRequested: function () {
+      $('#login_submit_button, #freetrial_landing_login_form button').click(function () {
+        analytics.track('Login Requested', {
+          emailAddress: $('#login_form_name').val(),
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'right'
+          }
+        })
+      });
+    },
+
+    trackLoginSelected: function () {
+      $('#header_userpanel_beta').find('.login a').click(function () {
+        analytics.track('Login Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).find('.caption').text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'header'
+          }
+        })
+      });
+
+      $('.showmedia-free-trial-already-have-account a').click(function () {
+        analytics.track('Login Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'right'
+          }
+        })
+      });
+
+      $('#freetrial_landing_select_login_form').click(function() {
+        analytics.track('Login Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'right'
+          }
+        })
+      })
+    },
+
+    trackLoginFailed: function () {
+      var errors = $('#login_form').find('li.error');
+      if (errors.length > 0) {
+        analytics.track('Login Failed', {
+          emailAddress: $('#login_form_name').val(),
+          failureReason: errors.first().text()
+        });
+      }
+
+      errors = $('#freetrial_login_form').find('li.error');
+      if (errors.length > 0) {
+        analytics.track('Login Failed', {
+          emailAddress: $('#login_form_name').val(),
+          failureReason: errors.first().text()
+        });
+      }
+
+
+    },
+
+    trackRegistrationRequested: function () {
+      var actionDetail = function(element, position) {
+        return {
+          textOfButtonOrLink: $(element).text(),
+          pageOrScreen: $(document).find('head title').text(),
+          position: position
+        }
+      };
+
+      $('#signup_form #signup_submit_button').click(function () {
+        analytics.track('Registration Requested', {
+          emailAddress: $('#signup_with_profile_email').val(),
+          ActionDetail: actionDetail(this, 'left')
+        })
+      });
+
+      $('#showmedia_free_trial_signup').find('a.button').click(function () {
+        analytics.track('Registration Requested', {
+          emailAddress: $('#new_email').val(),
+          ActionDetail: actionDetail(this, 'right')
+        })
+      });
+
+      $('#freetrial_signup_form #signup_submit_button').click(function () {
+        analytics.track('Registration Requested', {
+          emailAddress: $('#signup_email').val(),
+          ActionDetail: actionDetail(this, 'right')
+        });
+
+        //catch ajax validation errors
+        segment.trackRegistrationFailed();
+      });
+    },
+
+    trackRegistrationFailed: function () {
+      var errors = $('#signup_form').find('li.error');
+      if (errors.length > 0) {
+        analytics.track('Registration Failed', {
+          emailAddress: $('#signup_with_profile_email').val(),
+          failureReason: errors.first().text()
+        });
+      }
+
+      errors = $('#freetrial_signup_form').find('.input-error-message');
+      if (errors.length > 0) {
+        analytics.track('Registration Failed', {
+          emailAddress: $('#freetrial_signup_form #signup_email').val(),
+          failureReason: errors.first().text()
+        });
+      }
+    },
+
+    trackRegistrationSelected: function () {
+      $('#freetrial_landing_select_signup_form').click(function() {
+        analytics.track('Registration Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'right'
+          }
+        })
+      })
+    },
+
+    trackLinkAccountPermissionsAgreed: function () {
+      $('.permissions-request #allow_link').click(function () {
+        analytics.track('Link Accounts Permissions Agreed', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'bottom'
+          }
+        })
+      });
+    },
+
+    trackLinkAccountPermissionsDisagree: function () {
+      $('.permissions-request #deny_link').click(function () {
+        analytics.track('Link Accounts Permissions Disagree', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'bottom'
+          }
+        })
+      });
+    },
+
+    trackLinkAccountRequested: function () {
+      $('form[name="partners_login_form"]').submit(function () {
+        analytics.track('Link Accounts Requested', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).find('#log_in_submit_button').text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'bottom'
+          }
+        })
+      });
+    },
+
+    trackPaymentInfoSelected: function () {
+      $('.subscription-page #payment_method_credit_card').click(clickOnPaymentInfo('Credit Card'));
+      $('.subscription-page #payment_method_paypal').click(clickOnPaymentInfo('PayPal'));
+      $('.subscription-page #payment_method_paymentez').click(clickOnPaymentInfo('Paymentez'));
+
+      function clickOnPaymentInfo (text) {
+        return function () {
+          analytics.track('Payment Info Selected', {
+            ActionDetail: {
+              textOfButtonOrLink: text || $(this).text(),
+              pageOrScreen: $(document).find('head title').text(),
+              position: 'center'
+            }
+          });
+        }
+      }
+    },
+
+    trackCustomEvent: function (event, data) {
+      analytics.track(event, data);
+    },
+
+    trackSubscriptionCanceled: function (sku) {
+      analytics.track('Subscription Canceled', {
+        SKU: {
+          skuId: sku,
+          skuTitle: '',
+          skuType: ''
+        }
+      });
+    },
+
+    trackSubscriptionSelected: function () {
+      $(
+        '#plan_comparision_choose_premium, ' +
+        '#plan_comparision_premium_skip_free_trial,' +
+        '#plan_comparision_choose_premiumplus, ' +
+        '#plan_comparision_premiumplus_skip_free_trial'
+      ).click(function () {
+        analytics.track('Subscription Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).text().trim(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'center'
+          }
+        });
+      });
+    },
+
+    trackSubscriptionRequested: function () {
+      $('#premium_pick_plan_container').find('.premium-pick-plan-choices a').click(function () {
+        analytics.track('Subscription Requested', {
+          ActionDetail: {
+            textOfButtonOrLink: $(this).attr('data-text') || $(this).text().trim(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'center'
+          },
+          SKU: {
+            skuId: $(this).attr('data-sku'),
+            skuTitle: '',
+            skuType: ''
+          }
+        });
+      });
+    },
+
+    trackUpsellSelected: function () {
+      $('#header_try_premium_free').click(trackEvent('top', 'Premium try free'));
+      $('#footer_compare_plans, #footer_two_week_free_trial').click(trackEvent('bottom'));
+      $('#cancellation_try_vrv_button').click(trackEvent('center'));
+      $('#get_funimation_button, #vrv_offline_view_ad, #vrv_funimation_and_offline_view_ad')
+        .click(trackEvent('right', 'Find Out More'));
+
+      function trackEvent(position, text) {
+        return function () {
+          analytics.track('Upsell Selected', {
+            ActionDetail: {
+              textOfButtonOrLink: text || $(this).text().trim(),
+              pageOrScreen: $(document).find('head title').text(),
+              position: position || ''
+            }
+          });
+        }
+      }
+    },
+
+    trackSubscriptionCancelRequested: function () {
+      analytics.track('Subscription Cancel Requested');
+    },
+
+    trackSubscriptionCancelConfirmed: function () {
+      analytics.track('Subscription Cancel Confirmed');
+    },
+
+    trackSubscriptionCancelSelected: function () {
+      analytics.track('Subscription Cancel Selected');
+    },
+
+    trackFreeTrialCancelled: function (sku) {
+      analytics.track('Free Trial Cancelled', {
+        SKU: {
+          skuId: sku,
+          skuTitle: '',
+          skuType: ''
+        }
+      });
+    },
+
+    trackFreeTrialSelected: function () {
+      $('#js_continue_free_trial').click(function () {
+        var element = $(this);
+        analytics.track('Free Trial Selected', {
+          ActionDetail: {
+            textOfButtonOrLink: element.text(),
+            pageOrScreen: $(document).find('head title').text(),
+            position: 'right'
+          },
+          SKU: {
+            skuId: element.data('sku'),
+            skuTitle: '',
+            skuType: ''
+          },
+          ExternalReferrer: {
+            referrerId: '',
+            referrerLink: '',
+            referrerName: '',
+            referrerType: '',
+            referrerUrl: ''
+          },
+          lengthOfFreeTrial: '14 Days'
+        });
+      });
+    },
+
+    trackUpsellDisplayed: function (textOfButtonOrLink, position) {
+      analytics.track('Upsell Displayed', {
+        textOfButtonOrLink: textOfButtonOrLink,
+        position: position
+      });
+    },
+
+    trackExperimentViewed: function (experiment, variant) {
+      analytics.track('Experiment Viewed', {
+        experimentId: experiment,
+        variantId: variant
+      });
+    }
+  };
+
+  $(function () {
+    segment.track();
+  });
+</script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bad6e2948e","applicationID":"40563456","transactionName":"NFZQZ0IAD0BRVkddXw0ccUZDFQ5eH1ZBDkcGX1FcXQQ=","queueTime":0,"applicationTime":320,"atts":"GBFTEQoaHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  <!--  pylon15 : ce5a924e40-release-2017-12-11 -->
+</html>
