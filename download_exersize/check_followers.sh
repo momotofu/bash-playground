@@ -1,11 +1,10 @@
 github_username='defunkt'
-previous_followers=$(cat "./downloaded_files" | tail -n 1)
-current_followers=$(curl "https://api.github.com/users/defunkt/followers")
+file_path="./downloaded_files/"
+previous_followers=$(cat "$file_path$(ls $file_path | tail -n 1)")
+current_followers=$(curl "https://api.github.com/users/$github_username/followers")
 
-echo $current_followers
-
-# $(diff $previous_followers $current_followers)
-# if (($?==1))
-# then
-#   touch $(date "%Y-%m-%d-%S-$github_username") downloaded_files/
-# fi
+if [ "$current_followers" = "$previous_followers" ]; then
+  echo "no change"
+else
+  echo "$current_followers" >> "$file_path$(date "+%Y-%m-%d-%S").txt"
+fi
